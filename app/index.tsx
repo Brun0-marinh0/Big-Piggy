@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import { Navbar } from "@/src/components/molecules/Navbar";
+import { View } from "react-native";
 
 export default function Index() {
   return (
     <View>
-      <Text>Big Piggy 🐖</Text>
+      <Navbar username="Bruno" />
     </View>
   );
 }
