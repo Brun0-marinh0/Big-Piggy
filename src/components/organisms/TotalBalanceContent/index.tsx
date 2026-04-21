@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import { BankCardsContent } from "../BankCardsCpntent";
+import { BankCardsContent } from "../BankCardsContent";
 import { styles } from "./styles";
 
 export function TotalBalanceContent({
