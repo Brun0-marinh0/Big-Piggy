@@ -6,8 +6,11 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: 8,
     padding: 10,
+    paddingRight: 0,
     borderColor: colors.borderColor,
     borderWidth: 1,
+    gap: 20,
+    marginTop: 10,
   },
   balanceAmount: {
     fontSize: 24,

@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-
+import { BankCardsContent } from "../BankCardsCpntent";
 import { styles } from "./styles";
 
 export function TotalBalanceContent({
@@ -21,19 +21,22 @@ export function TotalBalanceContent({
       end={{ x: 1, y: 0 }}
       style={styles.card}
     >
-      <Text style={stylesMain.textCaption}>SALDO TOTAL</Text>
-      <View style={styles.balanceRow}>
-        <Text style={[stylesMain.textSubtitle, styles.balanceAmount]}>
-          {showBalance ? `R$ ${totalBalance.toFixed(2)}` : "****"}
-        </Text>
-        <TouchableOpacity onPress={() => setShowBalance(!showBalance)}>
-          <Ionicons
-            name={showBalance ? "eye" : "eye-off"}
-            size={20}
-            color={colors.text_subtitle}
-          />
-        </TouchableOpacity>
+      <View>
+        <Text style={stylesMain.textCaption}>SALDO TOTAL</Text>
+        <View style={styles.balanceRow}>
+          <Text style={[stylesMain.textSubtitle, styles.balanceAmount]}>
+            {showBalance ? `R$ ${totalBalance.toFixed(2)}` : "****"}
+          </Text>
+          <TouchableOpacity onPress={() => setShowBalance(!showBalance)}>
+            <Ionicons
+              name={showBalance ? "eye" : "eye-off"}
+              size={20}
+              color={colors.text_subtitle}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
+      <BankCardsContent />
     </LinearGradient>
   );
 }
