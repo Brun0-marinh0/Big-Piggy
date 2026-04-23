@@ -3,9 +3,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   gridContainer: {
-    flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between",
     gap: 10,
     marginTop: 10,
     marginBottom: 10,

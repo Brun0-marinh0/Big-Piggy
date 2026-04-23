@@ -5,3 +5,10 @@ export type Account = {
   color: string;
   icon: string;
 };
+
+export type Alert = {
+  id: string;
+  type: string;
+  message: string;
+  date: string;
+};
