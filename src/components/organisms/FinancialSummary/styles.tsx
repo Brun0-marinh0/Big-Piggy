@@ -20,11 +20,11 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   wonCard: {
-    borderLeftColor: palette.green[400],
+    borderLeftColor: palette.green[600],
     borderLeftWidth: 2,
   },
   lostCard: {
-    borderLeftColor: palette.red[400],
+    borderLeftColor: palette.red[600],
     borderLeftWidth: 2,
   },
   bankName: {

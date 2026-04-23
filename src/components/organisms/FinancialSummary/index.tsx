@@ -4,7 +4,7 @@ import { styles } from "./styles";
 
 export function FinancialSummary() {
   return (
-    <View>
+    <>
       <View style={styles.gridContainer}>
         <View style={[styles.cardContainer, styles.wonCard]}>
           <Text style={styles.bankName}>Ganhos</Text>
@@ -16,6 +16,6 @@ export function FinancialSummary() {
         </View>
       </View>
       <ExpenseAlert />
-    </View>
+    </>
   );
 }

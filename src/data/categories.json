@@ -1,0 +1,5 @@
+[
+  { "id": "1", "name": "Game", "icon": "GameController", "color": "#4C6EF5" },
+  { "id": "2", "name": "Comida", "icon": "ForkKnife", "color": "#F97316" },
+  { "id": "3", "name": "Uber", "icon": "Car", "color": "#8B5CF6" }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Itaú",
+    "balance": 1000.0,
+    "color": "#4C6EF5",
+    "icon": "PiggyBank"
+  },
+  {
+    "id": "2",
+    "name": "Nubank",
+    "balance": 2000.0,
+    "color": "#8B5CF6",
+    "icon": "Wallet"
+  },
+  {
+    "id": "3",
+    "name": "Inter",
+    "balance": 0.0,
+    "color": "#22C26C",
+    "icon": "CreditCard"
+  }
+]
