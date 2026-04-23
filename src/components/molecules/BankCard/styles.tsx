@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     padding: 6,
     alignItems: "center",
     gap: 6,
-    width: 130,
+    width: 144,
   },
   bankName: {
     color: colors.text_caption,
