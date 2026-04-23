@@ -5,13 +5,15 @@ import { db } from "@/src/data";
 import { View } from "react-native";
 
 const balance = db.getTotalBalance();
+const totalExpense = db.getTotalExpense();
+const totalIncome = db.getTotalIncome();
 
 export default function Index() {
   return (
     <View>
       <Navbar username="Bruno" />
       <TotalBalanceContent totalBalance={balance} />
-      <FinancialSummary />
+      <FinancialSummary totalExpense={totalExpense} totalIncome={totalIncome} />
     </View>
   );
 }

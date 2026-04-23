@@ -2,10 +2,10 @@ import accounts from "./accounts.json";
 import alerts from "./alerts.json";
 import categories from "./categories.json";
 import transactions from "./transactions.json";
-import type { Account } from "./types";
+import type { Account, Alert } from "./types";
 
-export type { Account };
-export { accounts, categories, transactions, alerts };
+export { accounts, alerts, categories, transactions };
+export type { Account, Alert };
 
 export const db = {
   accounts,
@@ -32,4 +32,26 @@ export const db = {
     transactions
       .filter((t) => t.type === "expense")
       .reduce((sum, t) => sum + t.amount, 0),
+
+  getTopExpenseCategories: () => {
+    const totals: Record<
+      string,
+      { category: (typeof categories)[0]; total: number }
+    > = {};
+
+    transactions
+      .filter((t) => t.type === "expense")
+      .forEach((t) => {
+        const category = categories.find((c) => c.id === t.categoryId);
+        if (!category) return;
+
+        if (!totals[category.id]) {
+          totals[category.id] = { category, total: 0 };
+        }
+
+        totals[category.id].total += Math.abs(t.amount);
+      });
+
+    return Object.values(totals).sort((a, b) => b.total - a.total);
+  },
 };
