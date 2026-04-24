@@ -1,6 +1,7 @@
 import { Navbar } from "@/src/components/molecules/Navbar";
 import { FinancialSummary } from "@/src/components/organisms/FinancialSummary";
 import { TotalBalanceContent } from "@/src/components/organisms/TotalBalanceContent";
+import { TopExpenceCategories } from "@/src/components/organisms/TopExpenceCategories"
 import { db } from "@/src/data";
 import { View } from "react-native";
 
@@ -14,6 +15,7 @@ export default function Index() {
       <Navbar username="Bruno" />
       <TotalBalanceContent totalBalance={balance} />
       <FinancialSummary totalExpense={totalExpense} totalIncome={totalIncome} />
+      <TopExpenceCategories/>
     </View>
   );
 }
