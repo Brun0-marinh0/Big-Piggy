@@ -4,6 +4,10 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { ExpenceCategoriesCard } from "../../molecules/ExpenceCategoriesCard";
 import { styles } from "./styles";
 
+import { db } from "@/src/data";
+
+const topCategories = db.getTopExpenseCategories();
+
 export function TopExpenceCategories() {
   return (
     <>
@@ -19,8 +23,10 @@ export function TopExpenceCategories() {
           <CaretRightIcon size={16} color={colors.primary} />
         </TouchableOpacity>
       </View>
-      <View>
-        <ExpenceCategoriesCard />
+      <View style={styles.contentCategories}>
+        {topCategories.slice(0, 3).map((category) => (
+          <ExpenceCategoriesCard key={category.category.id} data={category} />
+        ))}
       </View>
     </>
   );

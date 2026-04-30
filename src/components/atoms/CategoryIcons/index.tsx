@@ -6,9 +6,14 @@ import { styles } from "./styles";
 type CategoryIconsProps = {
   icon: string;
   color: string;
+  typeTopExpense?: boolean;
 };
 
-export function CategoryIcons({ icon, color }: CategoryIconsProps) {
+export function CategoryIcons({
+  icon,
+  color,
+  typeTopExpense,
+}: CategoryIconsProps) {
   const Icon = (
     PhosphorIcons as unknown as Record<string, React.ElementType<IconProps>>
   )[icon];
@@ -16,8 +21,13 @@ export function CategoryIcons({ icon, color }: CategoryIconsProps) {
   if (!Icon) return null;
 
   return (
-    <View style={[styles.cardIcon, { backgroundColor: color + "33" }]}>
-      <Icon size={26} weight="fill" color={color} />
+    <View
+      style={[
+        typeTopExpense ? styles.cardIconTopExpense : styles.cardIcon,
+        { backgroundColor: color + "33" },
+      ]}
+    >
+      <Icon size={typeTopExpense ? 18 : 26} weight="fill" color={color} />
     </View>
   );
 }

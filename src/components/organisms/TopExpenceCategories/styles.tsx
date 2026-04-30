@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginTop: 10,
   },
   contentInform: {
     flexDirection: "row",
@@ -26,5 +27,10 @@ export const styles = StyleSheet.create({
   contentMoreDetails: {
     flexDirection: "row",
     alignItems: "center",
+  },
+  contentCategories: {
+    flexDirection: "row",
+    gap: 5,
+    marginTop: 10,
   },
 });
