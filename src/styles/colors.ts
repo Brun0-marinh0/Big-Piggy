@@ -24,6 +24,7 @@ export const palette = {
     100: "#D1D1D6",
     200: "#AEAEB2",
     400: "#353535",
+    800: "#27272a",
     900: "#191919",
   },
 } as const;
@@ -32,6 +33,7 @@ export const colors = {
   primary: palette.green[400],
   background: palette.gray[900],
   surface: palette.gray[400],
+  surface_bright: "#222121",
   borderColor: palette.gray[400],
   text_title: palette.gray[0],
   text_subtitle: palette.gray[100],
