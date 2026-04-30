@@ -15,7 +15,6 @@ export default function Index() {
       <Navbar username="Bruno" />
       <TotalBalanceContent totalBalance={balance} />
       <FinancialSummary totalExpense={totalExpense} totalIncome={totalIncome} />
-
       <TopExpenceCategories />
     </View>
   );
