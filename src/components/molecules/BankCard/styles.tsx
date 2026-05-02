@@ -1,4 +1,4 @@
-import { colors } from "@/src/styles/colors";
+import { colors, radii, spacing, typography } from "@/src/styles";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -7,19 +7,19 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
     borderColor: colors.borderColor,
     borderWidth: 1,
-    borderRadius: 2,
-    padding: 6,
+    borderRadius: radii.sm,
+    padding: spacing.sm,
     alignItems: "center",
-    gap: 6,
+    gap: spacing.sm,
     width: 144,
   },
   bankName: {
     color: colors.text_caption,
-    fontSize: 14,
+    fontSize: typography.size.sm,
   },
   cash: {
     color: colors.text_caption,
-    fontSize: 14,
-    fontWeight: "bold",
+    fontSize: typography.size.md,
+    fontWeight: typography.weight.bold,
   },
 });
