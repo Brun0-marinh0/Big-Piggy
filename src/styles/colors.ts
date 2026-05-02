@@ -3,6 +3,7 @@ export const palette = {
     400: "#22C26C",
     500: "#1AA85C",
     600: "#13874A",
+    700: "#0C5639",
   },
   blue: {
     400: "#0088FF",
@@ -34,7 +35,7 @@ export const colors = {
   background: palette.gray[900],
   surface: palette.gray[400],
   surface_bright: "#222121",
-  borderColor: palette.gray[400],
+  borderColor: palette.gray[800],
   text_title: palette.gray[0],
   text_subtitle: palette.gray[100],
   text_caption: palette.gray[200],

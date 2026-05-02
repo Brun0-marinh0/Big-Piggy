@@ -1,7 +1,7 @@
 import { stylesMain } from "@/App.styles";
-import { colors } from "@/src/styles/colors";
-import { Ionicons } from "@expo/vector-icons";
+import { palette } from "@/src/styles/colors";
 import { LinearGradient } from "expo-linear-gradient";
+import { EyeClosedIcon, EyeIcon } from "phosphor-react-native";
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { BankCardsContent } from "../BankCardsContent";
@@ -13,6 +13,7 @@ export function TotalBalanceContent({
   totalBalance: number;
 }) {
   const [showBalance, setShowBalance] = useState(true);
+  const iconSize = 23;
   return (
     <LinearGradient
       colors={["#181818", "#181818", "#22C26C"]}
@@ -27,12 +28,23 @@ export function TotalBalanceContent({
           <Text style={[stylesMain.textSubtitle, styles.balanceAmount]}>
             {showBalance ? `R$ ${totalBalance.toFixed(2)}` : "****"}
           </Text>
-          <TouchableOpacity onPress={() => setShowBalance(!showBalance)}>
-            <Ionicons
-              name={showBalance ? "eye" : "eye-off"}
-              size={20}
-              color={colors.text_subtitle}
-            />
+          <TouchableOpacity
+            style={styles.balanceToggle}
+            onPress={() => setShowBalance(!showBalance)}
+          >
+            {showBalance ? (
+              <EyeIcon
+                size={iconSize}
+                color={palette.green[700]}
+                weight="bold"
+              />
+            ) : (
+              <EyeClosedIcon
+                size={iconSize}
+                color={palette.green[700]}
+                weight="bold"
+              />
+            )}
           </TouchableOpacity>
         </View>
       </View>

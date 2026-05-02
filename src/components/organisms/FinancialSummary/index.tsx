@@ -13,11 +13,11 @@ export function FinancialSummary({
   return (
     <>
       <View style={styles.gridContainer}>
-        <View style={[styles.cardContainer, styles.wonCard]}>
+        <View style={styles.cardContainer}>
           <Text style={styles.bankName}>Ganhos</Text>
           <Text style={styles.textWon}>+ R$ {totalIncome.toFixed(2)}</Text>
         </View>
-        <View style={[styles.cardContainer, styles.lostCard]}>
+        <View style={styles.cardContainer}>
           <Text style={styles.bankName}>Perdas</Text>
           <Text style={styles.textLost}>- R$ {-totalExpense.toFixed(2)}</Text>
         </View>
